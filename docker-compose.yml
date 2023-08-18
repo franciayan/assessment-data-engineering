@@ -10,9 +10,9 @@ services:
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: postgres
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init2.sql:/docker-entrypoint-db.d/init2.sql
     ports:
-      - "5432:5432"
+      - "5433:5433"
 
   jupyter:
     container_name: notebook
