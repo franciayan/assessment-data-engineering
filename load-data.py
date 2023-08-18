@@ -113,7 +113,7 @@ for year in range(2020, 2024):
             if event_id is None:
                 print("No event_id found, stopping script.")
                 break  # or raise an exception to stop the script
-
+                
             # Insert the session data into the 'sessions' table, ignoring any conflicts
             try:
                 cursor.execute(

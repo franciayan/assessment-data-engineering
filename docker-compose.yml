@@ -21,10 +21,10 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - .:/home/jovyan/work
+      - .:/home/francis/work
     command: >
-      bash -c "pip install -r /home/jovyan/work/notebooks/requirements.txt && 
-      jupyter notebook --notebook-dir=/home/jovyan/work/notebooks --ip='0.0.0.0' --port=8888 --no-browser --allow-root"
+      bash -c "pip install -r /home/francis/work/notebooks/requirements.txt && 
+      jupyter notebook --notebook-dir=/home/francis/work/notebooks --ip='0.0.0.0' --port=8888 --no-browser --allow-root"
 
   load-data:
     build: . 
