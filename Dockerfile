@@ -7,15 +7,15 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-COPY load-data.py .
-COPY wait-for.sh .
-COPY load-track-data.sh .
-COPY entrypoint.sh .
+COPY load-data.py /app/load-data.py
+COPY wait-for.sh /app/wait-for.sh
+COPY load-track-data.sh /app/load-track-data.sh
+COPY entrypoint.sh /app/entrypoint.sh
 
-RUN chmod +x wait-for.sh load-track-data.sh entrypoint.sh
+RUN chmod +x /app/wait-for.sh /app/load-track-data.sh /app/entrypoint.sh
 
 # Install MinIO Client
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/bin/mc && \
     chmod +x /usr/bin/mc
 
-CMD ["./entrypoint.sh"]
+CMD ["./entrypoint.sh","ls -l /app/"]

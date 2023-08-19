@@ -12,7 +12,7 @@ services:
     volumes:
       - ./init2.sql:/docker-entrypoint-db.d/init2.sql
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
   jupyter:
     container_name: notebook
