@@ -18,4 +18,4 @@ RUN chmod +x /app/wait-for.sh /app/load-track-data.sh /app/entrypoint.sh
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc -O /usr/bin/mc && \
     chmod +x /usr/bin/mc
 
-CMD ["./entrypoint.sh","ls -l /app/"]
+CMD ["./entrypoint.sh"]
