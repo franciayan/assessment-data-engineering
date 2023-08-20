@@ -7,7 +7,7 @@ curl -o /data/f1db_csv.zip http://ergast.com/downloads/f1db_csv.zip
 unzip -o /data/f1db_csv.zip -d /data/f1dbcsv
 
 # Wait for MinIO to be ready
-/wait-for localhost:9000 -t 60
+/wait-for.sh localhost:9000 -t 60
 
 # Configure MinIO client
 mc alias set minio http://minio:9000 minioadmin minioadmin
